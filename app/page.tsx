@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "AI Portfolio – Claude Code Projects",
@@ -53,6 +52,8 @@ const stack = [
   { name: "Tailwind CSS", sub: "v4" },
 ];
 
+const BASE = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 export default function PortfolioPage() {
   return (
     <div className="portfolio-root">
@@ -101,11 +102,10 @@ export default function PortfolioPage() {
             {works.map((w) => (
               <div key={w.title} className={`work-card${w.span ? " card-full" : ""}`}>
                 <div className="card-img-wrap">
-                  <Image
-                    src={w.image}
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={`${BASE}${w.image}`}
                     alt={w.title}
-                    width={900}
-                    height={w.span ? 220 : 260}
                     className="card-img"
                     style={{ objectPosition: "top" }}
                   />
