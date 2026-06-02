@@ -21,12 +21,12 @@ export function createPiece(colors: [Color, Color]): PuyoPair {
 }
 
 function inBounds(x: number, y: number): boolean {
-  return x >= 0 && x < BOARD_WIDTH && y < BOARD_HEIGHT;
+  return x >= 0 && x < BOARD_WIDTH && y >= 0 && y < BOARD_HEIGHT;
 }
 
 export function isCellFree(board: Board, x: number, y: number): boolean {
-  if (!inBounds(x, y)) return false;
   if (y < 0) return true;
+  if (!inBounds(x, y)) return false;
   return board[y][x] === null;
 }
 

@@ -26,5 +26,4 @@ export const COLOR_CONFIG: Record<Color, { gradient: string; glow: string; darkS
   blue:   { gradient: 'radial-gradient(circle at 33% 28%, #c4b5fd, #4c1d95 52%, #1e1035)', glow: '#7c3aed', darkStop: '#1e1035' },
   // Baseball (cream/off-white)
   yellow: { gradient: 'radial-gradient(circle at 33% 28%, #fffbf0, #fef3c7 52%, #d4a76a)', glow: '#fde68a', darkStop: '#d4a76a' },
-  purple: { gradient: 'radial-gradient(circle at 33% 28%, #e9d5ff, #9333ea 52%, #4c1d95)', glow: '#c084fc', darkStop: '#4c1d95' },
 };

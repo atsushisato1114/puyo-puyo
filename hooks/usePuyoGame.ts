@@ -170,7 +170,6 @@ export function usePuyoGame() {
     if (state.status !== 'clearing') return;
     const id = setTimeout(() => dispatch({ type: 'CLEAR_DONE' }), CLEAR_ANIM_MS);
     return () => clearTimeout(id);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [state.status, state.clearingCells]);
 
   // Keyboard

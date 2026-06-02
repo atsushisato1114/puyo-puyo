@@ -1,4 +1,4 @@
-export type Color = 'red' | 'green' | 'blue' | 'yellow' | 'purple';
+export type Color = 'red' | 'green' | 'blue' | 'yellow';
 export type Cell = Color | null;
 export type Board = Cell[][];
 

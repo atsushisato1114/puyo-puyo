@@ -84,7 +84,7 @@ export default function PuyoGame() {
           />
 
           {/* Chain flash */}
-          {status === 'clearing' && chain > 0 && (
+          {status === 'clearing' && (
             <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-20">
               <span
                 key={chain}
@@ -94,7 +94,7 @@ export default function PuyoGame() {
                   textShadow: '0 0 20px #f59e0b, 0 0 50px #d97706, 0 2px 4px rgba(0,0,0,0.9)',
                 }}
               >
-                {chain} CHAIN!
+                {chain + 1} CHAIN!
               </span>
             </div>
           )}

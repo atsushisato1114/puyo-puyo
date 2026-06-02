@@ -6,6 +6,35 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ---
 
+## Agents & Skills
+
+このプロジェクトには以下の SubAgents と Skills が設定されています。
+
+### SubAgents (`.claude/agents/`)
+
+| エージェント | 用途 | 起動トリガー |
+|---|---|---|
+| `code-reviewer` | コードレビュー・セキュリティ検査 | 新しいコードを書いた / レビュー依頼 |
+| `seo-blog-writer` | SEOブログ記事執筆 | 「記事を書いて」「〇〇文字で」 |
+| `claude-code-guide` | ClaudeCode機能（SubAgents/Skills/Commands/Hooks/MCP）の解説 | ClaudeCodeの使い方を聞かれたとき |
+| `doc-writer` | ドキュメント・JSDoc 生成 | 「ドキュメントを書いて」 |
+| `industry-researcher` | 業界情報のWeb収集・分析・レポート生成 | 「〇〇業界を調べて」「市場動向を分析して」 |
+| `differentiation-builder` | 競合との差別化戦略の設計・提案 | 「差別化戦略を考えて」「競合と違うアプローチを提案して」 |
+| `text-reviewer` | 文章の構成・誤字脱字・表現の添削 | 「文章を添削して」「誤字脱字を確認して」 |
+| `test-runner` | テスト生成・実行 | 「テストを書いて」「テストを実行して」 |
+
+### Skills (`.claude/skills/`)
+
+| スキル | 用途 | 呼び出し |
+|---|---|---|
+| `char-count` | テキスト文字数を4パターンで計測 | `/char-count` |
+| `summarize-url` | URLページを日本語要約 | `/summarize-url` |
+| `summarize-file` | ファイルをタイトル・トピック3つ・結論の形式で要約 | `/summarize-file <ファイルパス>` |
+| `claudecode-features` | SubAgents/Skills/Commands/Hooks/MCPの構造解説 | `claude-code-guide` エージェント内で使用 |
+| `build-and-review` | 業界調査→差別化戦略構築→文章添削を3エージェントで順次実行 | `/build-and-review` |
+
+---
+
 ## Commands
 
 ```bash
