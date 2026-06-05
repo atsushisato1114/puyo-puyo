@@ -36,6 +36,9 @@ jobs:
       - name: Add .nojekyll
         run: touch ./out/.nojekyll
 
+      - name: Copy portfolio to GitHub Pages root
+        run: rsync -a --exclude=README.md profile-site/ out/
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

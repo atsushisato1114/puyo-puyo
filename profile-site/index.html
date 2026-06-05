@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Development Portfolio | Asato</title>
+  <meta name="description" content="Claude / Claude Code を使ったAIツール・マルチエージェントシステムの開発ポートフォリオ" />
+  <meta property="og:title" content="AI Development Portfolio | Asato" />
+  <meta property="og:description" content="Claude / Claude Code を使ったAIツール・マルチエージェントシステムの開発ポートフォリオ" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://atsushisato1114.github.io/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="orb orb-1" aria-hidden="true"></div>
+<div class="orb orb-2" aria-hidden="true"></div>
+
+<!-- NAV -->
+<nav>
+  <span class="nav-logo">AI × Claude Code</span>
+  <div class="nav-links">
+    <a href="#works">Works</a>
+    <a href="#about">About</a>
+    <a href="https://github.com/atsushisato1114" target="_blank" rel="noopener">GitHub ↗</a>
+  </div>
+</nav>
+
+<div class="container">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-label">AI Development Portfolio</div>
+    <h1>Building Intelligent<br>Agents with Claude</h1>
+    <p>Claude / Claude Code を使ったAIツール・<br>マルチエージェントシステムの開発実績</p>
+    <div class="badge-row">
+      <span class="badge">Claude API</span>
+      <span class="badge">Claude Code</span>
+      <span class="badge">SubAgents</span>
+      <span class="badge">Next.js 16</span>
+      <span class="badge">TypeScript</span>
+    </div>
+  </section>
+
+  <!-- WORKS -->
+  <section class="works" id="works">
+    <p class="section-title">Works</p>
+    <div class="works-grid">
+
+      <!-- Card 1: News browsing agent -->
+      <div class="card" data-animate>
+        <div class="card-img-wrap">
+          <img class="card-img" src="images/image.png" alt="ニュース収集・要約エージェント" loading="lazy" />
+          <div class="card-img-overlay"><span>クリックで拡大</span></div>
+        </div>
+        <div class="card-body">
+          <p class="card-category">AI × Web Browsing</p>
+          <p class="card-title">ニュース収集・要約エージェント</p>
+          <p class="card-desc">ClaudeがYahoo!ニュース・NHK・朝日新聞など複数サイトを横断収集し、見出し一覧をリアルタイムで要約・整形して出力するAIエージェント。</p>
+          <div class="tag-row">
+            <span class="tag">Claude API</span>
+            <span class="tag">Web Browsing</span>
+            <span class="tag">Sonnet 4.6</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2: CLI tool -->
+      <div class="card" data-animate>
+        <div class="card-img-wrap">
+          <img class="card-img" src="images/image2.png" alt="Claude Code CLI リアルタイム収集" loading="lazy" />
+          <div class="card-img-overlay"><span>クリックで拡大</span></div>
+        </div>
+        <div class="card-body">
+          <p class="card-category">CLI Automation</p>
+          <p class="card-title">Claude Code CLI リアルタイム収集</p>
+          <p class="card-desc">Claude Code CLIからターミナル直接実行。複数ニュースソースを即時取得・整形し、見出し一覧をリアルタイムで出力する様子。</p>
+          <div class="tag-row">
+            <span class="tag">Claude Code</span>
+            <span class="tag">CLI</span>
+            <span class="tag">PowerShell</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3: full width - SubAgents architecture -->
+      <div class="card full" data-animate>
+        <div class="card-img-wrap">
+          <img class="card-img" src="images/imagesub.png" alt="SubAgents + Skills 構成設計" loading="lazy" />
+          <div class="card-img-overlay"><span>クリックで拡大</span></div>
+        </div>
+        <div class="card-body">
+          <p class="card-category">Multi-Agent Architecture</p>
+          <p class="card-title">SubAgents + Skills 構成設計</p>
+          <div class="pipeline-steps" aria-label="パイプラインステップ">
+            <div class="step">
+              <span>Phase 1</span>
+              業界調査
+              <small>industry-researcher</small>
+            </div>
+            <div class="step arrow" aria-hidden="true">→</div>
+            <div class="step">
+              <span>Phase 2</span>
+              差別化戦略
+              <small>differentiation-builder</small>
+            </div>
+            <div class="step arrow" aria-hidden="true">→</div>
+            <div class="step">
+              <span>Phase 3</span>
+              文章添削
+              <small>text-reviewer</small>
+            </div>
+          </div>
+          <p class="card-desc">Claude Code の SubAgents 機能を活用し、業界調査 → 差別化戦略構築 → 文章添削を3エージェントが順次バトンを渡して自動実行するパイプライン。VS Code 上でエージェントの設定・起動・実行ログをリアルタイム確認。</p>
+          <div class="tag-row">
+            <span class="tag">Claude Code</span>
+            <span class="tag">SubAgents</span>
+            <span class="tag">Skills</span>
+            <span class="tag">Pipeline</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4: full width - pipeline quality output -->
+      <div class="card full" data-animate>
+        <div class="card-img-wrap">
+          <img class="card-img" src="images/sub2image.png" alt="AI品質レビュー自動出力" loading="lazy" />
+          <div class="card-img-overlay"><span>クリックで拡大</span></div>
+        </div>
+        <div class="card-body">
+          <p class="card-category">Quality Assurance AI</p>
+          <p class="card-title">AI 品質レビュー自動出力</p>
+          <div class="quality-grid" aria-label="品質評価サマリー">
+            <div class="quality-item must">
+              <span class="quality-label">Must Fix</span>
+              <span class="quality-count">2件</span>
+            </div>
+            <div class="quality-item should">
+              <span class="quality-label">Should Fix</span>
+              <span class="quality-count">6件</span>
+            </div>
+            <div class="quality-item nice">
+              <span class="quality-label">Nice to Have</span>
+              <span class="quality-count">4件</span>
+            </div>
+          </div>
+          <p class="card-desc">パイプラインの最終フェーズで text-reviewer エージェントが品質評価レポートを自動生成。Must Fix / Should Fix / Nice to Have の3段階で修正提案を構造化して出力。ブログ記事への活用まで想定したレポートフォーマット。</p>
+          <div class="tag-row">
+            <span class="tag">text-reviewer</span>
+            <span class="tag">Quality Review</span>
+            <span class="tag">Auto Report</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <p class="section-title">About</p>
+    <div class="about-inner">
+      <div>
+        <h2>AI Developer</h2>
+        <p>Claude API・Claude Code を中心に、実務で使えるAIツールやマルチエージェントシステムを設計・開発しています。</p>
+        <p>自動化パイプライン、情報収集、コンテンツ生成など、業務の現場で価値を発揮するソリューションを構築します。</p>
+      </div>
+      <div>
+        <div class="stack-grid">
+          <div class="stack-item"><strong>Claude</strong>Sonnet 4.6</div>
+          <div class="stack-item"><strong>Claude Code</strong>CLI / SDK</div>
+          <div class="stack-item"><strong>SubAgents</strong>Multi-Agent</div>
+          <div class="stack-item"><strong>Next.js</strong>16 App Router</div>
+          <div class="stack-item"><strong>TypeScript</strong>Strict Mode</div>
+          <div class="stack-item"><strong>Tailwind</strong>v4</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <a href="https://github.com/atsushisato1114" target="_blank" rel="noopener">GitHub: atsushisato1114</a>
+  &nbsp;·&nbsp; Built with Claude Code
+</footer>
+
+<!-- IMAGE MODAL / LIGHTBOX -->
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-label="画像プレビュー">
+  <div class="modal-backdrop"></div>
+  <button class="modal-close" aria-label="閉じる">✕</button>
+  <img class="modal-img" src="" alt="" />
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
