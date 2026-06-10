@@ -1,0 +1,45 @@
+colors:
+  background: "#08080f"
+  surface: "rgba(255, 255, 255, 0.04)"
+  surface_border: "rgba(255, 255, 255, 0.08)"
+  accent_cyan: "#00d9ff"
+  accent_purple: "#b366ff"
+  accent_green: "#00ff88"
+  text_primary: "#ffffff"
+  text_secondary: "rgba(255, 255, 255, 0.6)"
+  glow_cyan: "rgba(0, 217, 255, 0.25)"
+  glow_purple: "rgba(179, 102, 255, 0.25)"
+
+typography:
+  font_mono: "'JetBrains Mono', 'Fira Code', monospace"
+  font_sans: "'Inter', 'Noto Sans JP', sans-serif"
+  size_hero: "clamp(2.5rem, 6vw, 5rem)"
+  size_section: "clamp(1.5rem, 3vw, 2.25rem)"
+  size_card_title: "1.125rem"
+  size_body: "0.9375rem"
+  size_caption: "0.8125rem"
+  weight_bold: 700
+  weight_normal: 400
+  line_height: 1.65
+
+spacing:
+  section_y: "6rem"
+  card_gap: "1.5rem"
+  card_padding: "1.5rem"
+  container_max: "1100px"
+  container_px: "clamp(1rem, 5vw, 2rem)"
+
+effects:
+  glass_blur: "blur(12px)"
+  border_radius_card: "12px"
+  border_radius_button: "6px"
+  transition: "0.25s ease"
+  hover_lift: "translateY(-4px)"
+  neon_shadow_cyan: "0 0 24px rgba(0, 217, 255, 0.4)"
+  neon_shadow_purple: "0 0 24px rgba(179, 102, 255, 0.4)"
+
+layout:
+  nav_height: "60px"
+  hero_min_height: "100vh"
+  works_columns: 2
+  works_columns_mobile: 1

@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Dev Portfolio</title>
+  <meta name="description" content="Claude Code の SubAgents・Skills・Hooks を活用したマルチエージェント自動化ポートフォリオ" />
+  <meta property="og:title" content="AI Dev Portfolio" />
+  <meta property="og:description" content="Claude Code の SubAgents・Skills・Hooks を組み合わせ、情報収集から文章生成・添削まで一気通貫で処理するワークフローを構築しました。" />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- M-4: スキップナビゲーション -->
+  <a href="#works" class="skip-link">メインコンテンツへスキップ</a>
+
+  <!-- NAV -->
+  <nav class="nav" aria-label="メインナビゲーション">
+    <span class="nav-logo" aria-hidden="true">AI<span class="accent-cyan">_</span>DEV</span>
+    <ul class="nav-links">
+      <li><a href="#works">Works</a></li>
+      <li><a href="#process">Process</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg-orb orb1" aria-hidden="true"></div>
+    <div class="hero-bg-orb orb2" aria-hidden="true"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow"><span class="tag" lang="en">Claude Code</span> × Multi-Agent</p>
+      <h1 class="hero-title">
+        AIで仕事を<br />
+        <span class="gradient-text">自動化する</span>
+      </h1>
+      <p class="hero-desc">
+        <span lang="en">Claude Code</span> の <span lang="en">SubAgents</span>・<span lang="en">Skills</span>・<span lang="en">Hooks</span> を組み合わせ、<br class="br-pc" />
+        情報収集から文章生成・添削まで一気通貫で処理するワークフローを構築しました。
+      </p>
+      <div class="hero-ctas">
+        <a href="#works" class="btn btn-primary">成果物を見る</a>
+        <a href="#process" class="btn btn-ghost">仕組みを知る</a>
+      </div>
+      <div class="hero-stats" aria-label="統計">
+        <div class="stat">
+          <span class="stat-num" aria-label="3エージェント">3</span>
+          <span class="stat-label" lang="en">Agents</span>
+        </div>
+        <div class="stat-divider" aria-hidden="true"></div>
+        <div class="stat">
+          <span class="stat-num" aria-label="5以上のスキル">5+</span>
+          <span class="stat-label" lang="en">Skills</span>
+        </div>
+        <div class="stat-divider" aria-hidden="true"></div>
+        <div class="stat">
+          <span class="stat-num" aria-label="無限の自動化">∞</span>
+          <span class="stat-label">自動化</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORKS -->
+  <section class="section" id="works">
+    <div class="container">
+      <p class="section-eyebrow" lang="en">Portfolio</p>
+      <h2 class="section-title">成果物</h2>
+      <p class="section-desc"><span lang="en">Claude Code</span> を使って実際に構築・実行したプロジェクトのスクリーンショット</p>
+
+      <div class="works-grid">
+
+        <!-- M-2: div → button でキーボード対応 -->
+        <article class="work-card">
+          <button class="work-img-wrap" type="button"
+                  aria-label="画像を拡大: Claude UI でニュース収集タスクを実行">
+            <img src="images/image.png" alt="Claude UI でニュース収集タスクを実行している画面。Yahoo!ニュースのヘッドラインが一覧表示されている" loading="lazy" />
+            <div class="work-overlay" aria-hidden="true">
+              <span class="work-overlay-label">View</span>
+            </div>
+          </button>
+          <div class="work-body">
+            <div class="work-header">
+              <span class="work-num" aria-hidden="true">01</span>
+              <span class="work-tag" lang="en">Web Scraping</span>
+            </div>
+            <h3 class="work-title">ニュース収集エージェント</h3>
+            <p class="work-desc">
+              <span lang="en">Claude UI</span> 上でニュースサイト（<span lang="en">Yahoo!</span> / <span lang="en">NHK</span>）の最新ヘッドラインを自動収集。
+              <span lang="en">WebSearch</span> と <span lang="en">WebFetch</span> を組み合わせ、複数ソースをまとめて出力するタスクを実行しています。
+            </p>
+            <ul class="work-tags" aria-label="使用技術">
+              <li lang="en">Claude Code</li>
+              <li lang="en">WebSearch</li>
+              <li lang="en">WebFetch</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="work-card">
+          <button class="work-img-wrap" type="button"
+                  aria-label="画像を拡大: Claude Code CLI でニュース見出しを取得">
+            <img src="images/image2.png" alt="PowerShell ターミナルで Claude Code を実行しニュース見出し一覧を取得している画面" loading="lazy" />
+            <div class="work-overlay" aria-hidden="true">
+              <span class="work-overlay-label">View</span>
+            </div>
+          </button>
+          <div class="work-body">
+            <div class="work-header">
+              <span class="work-num" aria-hidden="true">02</span>
+              <span class="work-tag" lang="en">CLI Automation</span>
+            </div>
+            <h3 class="work-title"><span lang="en">CLI</span> パイプライン実行</h3>
+            <p class="work-desc">
+              ターミナルから <span lang="en">Claude Code</span> を直接呼び出し、ニュース見出し一覧をテキスト形式で取得。
+              スクリプト連携を前提とした出力フォーマット制御を実現しています。
+            </p>
+            <ul class="work-tags" aria-label="使用技術">
+              <li lang="en">CLI</li>
+              <li lang="en">PowerShell</li>
+              <li lang="en">Structured Output</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="work-card">
+          <button class="work-img-wrap" type="button"
+                  aria-label="画像を拡大: VSCode で SubAgents・Skills 構成を表示">
+            <img src="images/imagesub.png" alt="VSCode 上で SubAgents と Skills のディレクトリ構成と各エージェントの説明が表示されている画面" loading="lazy" />
+            <div class="work-overlay" aria-hidden="true">
+              <span class="work-overlay-label">View</span>
+            </div>
+          </button>
+          <div class="work-body">
+            <div class="work-header">
+              <span class="work-num" aria-hidden="true">03</span>
+              <span class="work-tag" lang="en">Agent Architecture</span>
+            </div>
+            <h3 class="work-title">マルチエージェント構成設計</h3>
+            <p class="work-desc">
+              <span lang="en">VSCode</span> 上で <span lang="en">SubAgents</span> と <span lang="en">Skills</span> のディレクトリ構成を可視化。
+              <span lang="en">industry-researcher</span>・<span lang="en">differentiation-builder</span>・<span lang="en">text-reviewer</span> の 3 エージェントが
+              それぞれ専用の役割を持つ設計を示しています。
+            </p>
+            <ul class="work-tags" aria-label="使用技術">
+              <li lang="en">SubAgents</li>
+              <li lang="en">Skills</li>
+              <li lang="en">VSCode</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="work-card">
+          <button class="work-img-wrap" type="button"
+                  aria-label="画像を拡大: 3エージェントパイプライン完了画面">
+            <img src="images/sub2image.png" alt="3エージェントパイプライン完了後の結果表示。Must Fix・Should Fix・Nice to Have の構造化フィードバックが表示されている" loading="lazy" />
+            <div class="work-overlay" aria-hidden="true">
+              <span class="work-overlay-label">View</span>
+            </div>
+          </button>
+          <div class="work-body">
+            <div class="work-header">
+              <span class="work-num" aria-hidden="true">04</span>
+              <span class="work-tag" lang="en">Pipeline</span>
+            </div>
+            <h3 class="work-title">3エージェント自動パイプライン</h3>
+            <p class="work-desc">
+              業界調査 → 差別化戦略構築 → 文章添削を 3 エージェントが順番に処理し、
+              最終成果物（添削済みブログ記事）を自動生成。<span lang="en">Must Fix / Should Fix / Nice to Have</span>
+              の構造化フィードバックまで出力します。
+            </p>
+            <ul class="work-tags" aria-label="使用技術">
+              <li lang="en">Multi-Agent</li>
+              <li lang="en">Auto Pipeline</li>
+              <li lang="en">Text Review</li>
+            </ul>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="section section-alt" id="process">
+    <div class="container">
+      <p class="section-eyebrow" lang="en">How it works</p>
+      <h2 class="section-title">処理フロー</h2>
+      <p class="section-desc">3 つのエージェントが連携し、業界調査から最終成果物まで一気通貫で処理します</p>
+
+      <div class="process-flow">
+        <div class="process-step">
+          <div class="process-icon cyan" aria-hidden="true">🔍</div>
+          <div class="process-line cyan" aria-hidden="true"></div>
+          <h3 class="process-step-title" lang="en">Phase 1</h3>
+          <p class="process-step-name accent-cyan" lang="en">industry-researcher</p>
+          <p class="process-step-desc">
+            <span lang="en">WebSearch</span> + <span lang="en">WebFetch</span> で業界情報を収集。市場規模・トレンド・競合・課題を構造化レポートとして出力。
+          </p>
+        </div>
+        <!-- S-3: aria-hidden on decorative arrow -->
+        <div class="process-arrow" aria-hidden="true">→</div>
+        <div class="process-step">
+          <div class="process-icon purple" aria-hidden="true">⚡</div>
+          <div class="process-line purple" aria-hidden="true"></div>
+          <h3 class="process-step-title" lang="en">Phase 2</h3>
+          <p class="process-step-name accent-purple" lang="en">differentiation-builder</p>
+          <p class="process-step-desc">
+            <span lang="en">Phase 1</span> のレポートを受け取り、競合にない独自ポジショニングと差別化施策を設計して提案。
+          </p>
+        </div>
+        <div class="process-arrow" aria-hidden="true">→</div>
+        <div class="process-step">
+          <div class="process-icon green" aria-hidden="true">✍️</div>
+          <div class="process-line green" aria-hidden="true"></div>
+          <h3 class="process-step-title" lang="en">Phase 3</h3>
+          <p class="process-step-name accent-green" lang="en">text-reviewer</p>
+          <p class="process-step-desc">
+            <span lang="en">Phase 2</span> の成果物を受け取り、構成・誤字脱字・表現を多角的に添削。<span lang="en">Must Fix / Should Fix</span> 形式で出力。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section" id="contact">
+    <div class="container container-narrow">
+      <p class="section-eyebrow" lang="en">Contact</p>
+      <h2 class="section-title">お問い合わせ</h2>
+      <p class="section-desc">AI 開発・自動化ワークフローの構築について、お気軽にご連絡ください。</p>
+      <!-- N-1: メールアドレスをJS組み立てで難読化 -->
+      <a href="#" class="btn btn-primary btn-lg" id="contact-link">メールで連絡する</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <!-- N-5: footer logo aria-hidden -->
+      <span class="nav-logo" aria-hidden="true">AI<span class="accent-cyan">_</span>DEV</span>
+      <p class="footer-copy">Built with <span lang="en">Claude Code</span> &amp; <span lang="en">Multi-Agent Pipeline</span></p>
+    </div>
+  </footer>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="画像プレビュー">
+    <button class="lightbox-close" id="lightbox-close" aria-label="閉じる">✕</button>
+    <!-- S-5: aria-hidden 初期設定 -->
+    <img class="lightbox-img" id="lightbox-img" src="" alt="" aria-hidden="true" />
+  </div>
+
+  <script>
+    // N-1: メールアドレス難読化
+    (function() {
+      var u = 'am130609', d = 'gmail.com';
+      var el = document.getElementById('contact-link');
+      if (el) el.href = 'mailto:' + u + '@' + d;
+    })();
+
+    // Lightbox
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxClose = document.getElementById('lightbox-close');
+    let lastFocused = null;
+
+    const FOCUSABLE = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
+
+    function openLightbox(img) {
+      lastFocused = document.activeElement;
+      lightboxImg.src = img.src;
+      lightboxImg.alt = img.alt;
+      lightboxImg.removeAttribute('aria-hidden'); // S-5
+      lightbox.classList.add('active');
+      document.body.style.overflow = 'hidden';
+      lightboxClose.focus(); // M-1: フォーカスを閉じるボタンへ
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove('active');
+      document.body.style.overflow = '';
+      lightboxImg.setAttribute('aria-hidden', 'true'); // S-5
+      if (lastFocused) lastFocused.focus(); // M-1: 元の位置へ復元
+    }
+
+    // M-1: Tab キーをダイアログ内に閉じ込めるフォーカストラップ
+    lightbox.addEventListener('keydown', e => {
+      if (!lightbox.classList.contains('active')) return;
+      if (e.key === 'Escape') { closeLightbox(); return; }
+      if (e.key !== 'Tab') return;
+      const focusable = [...lightbox.querySelectorAll(FOCUSABLE)];
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      if (e.shiftKey) {
+        if (document.activeElement === first) { e.preventDefault(); last.focus(); }
+      } else {
+        if (document.activeElement === last) { e.preventDefault(); first.focus(); }
+      }
+    });
+
+    // M-2: button.work-img-wrap のクリックでライトボックスを開く
+    document.querySelectorAll('.work-img-wrap').forEach(wrap => {
+      wrap.addEventListener('click', () => {
+        const img = wrap.querySelector('img');
+        openLightbox(img);
+      });
+    });
+
+    lightboxClose.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
+
+    // Escape キーはフォーカストラップ内で処理済み（document レベルでも念のため）
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && lightbox.classList.contains('active')) closeLightbox();
+    });
+
+    // Scroll fade-in — S-8: unobserve でメモリ最適化
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          observer.unobserve(e.target); // 一度表示されたら監視終了
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.work-card, .process-step, .section-title, .section-desc').forEach(el => {
+      el.classList.add('fade-in');
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>
