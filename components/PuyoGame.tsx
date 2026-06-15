@@ -41,7 +41,7 @@ export default function PuyoGame() {
   const { state, start, resume } = usePuyoGame();
   const { status, board, currentPiece, clearingCells, nextColors, score, chain, maxChain, level } = state;
 
-  const showPiece = status === 'playing' || status === 'paused';
+  const isPieceVisible = status === 'playing' || status === 'paused';
 
   return (
     <div
@@ -79,7 +79,7 @@ export default function PuyoGame() {
         <div className="relative">
           <GameBoard
             board={board}
-            currentPiece={showPiece ? currentPiece : null}
+            currentPiece={isPieceVisible ? currentPiece : null}
             clearingCells={clearingCells}
           />
 
@@ -103,7 +103,10 @@ export default function PuyoGame() {
           {status === 'idle' && (
             <Overlay>
               <GlowButton onClick={start}>START</GlowButton>
-              <div className="mt-6 text-white/30 text-xs text-center leading-6">
+              <div
+                aria-label="操作方法: 左右矢印で移動、上矢印またはXで時計回り回転、Zで反時計回り回転、下矢印でファストドロップ、スペースでハードドロップ、Pでポーズ"
+                className="mt-6 text-white/30 text-xs text-center leading-6"
+              >
                 ← → Move &nbsp;·&nbsp; ↑ / X Rotate CW<br />
                 Z Rotate CCW &nbsp;·&nbsp; ↓ Fast Drop<br />
                 Space Hard Drop &nbsp;·&nbsp; P Pause
@@ -122,6 +125,7 @@ export default function PuyoGame() {
           {/* Game over overlay */}
           {status === 'gameOver' && (
             <Overlay>
+              <div role="alert" aria-live="assertive" className="flex flex-col items-center">
               <div
                 className="text-4xl font-black tracking-wider mb-1"
                 style={{ color: '#f87171', textShadow: '0 0 20px rgba(239,68,68,0.6)' }}
@@ -135,6 +139,7 @@ export default function PuyoGame() {
                 )}
               </div>
               <GlowButton onClick={start}>RETRY</GlowButton>
+              </div>
             </Overlay>
           )}
         </div>
