@@ -14,7 +14,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 | エージェント | 用途 | 起動トリガー |
 |---|---|---|
-| `code-reviewer` | コードレビュー・セキュリティ検査 | 新しいコードを書いた / レビュー依頼 |
+| `code-reviewer` | Next.js/React/TypeScript コードのレビュー・セキュリティ検査 | 新しいコードを書いた / レビュー依頼 |
+| `static-site-reviewer` | 静的HTML/CSS/JSサイトのレビュー（WCAG・GitHub Pages・パフォーマンス） | ポートフォリオ・LP・静的サイトを実装した / レビュー依頼 |
 | `seo-blog-writer` | SEOブログ記事執筆 | 「記事を書いて」「〇〇文字で」 |
 | `claude-code-guide` | ClaudeCode機能（SubAgents/Skills/Commands/Hooks/MCP）の解説 | ClaudeCodeの使い方を聞かれたとき |
 | `doc-writer` | ドキュメント・JSDoc 生成 | 「ドキュメントを書いて」 |
@@ -32,6 +33,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 | `summarize-file` | ファイルをタイトル・トピック3つ・結論の形式で要約 | `/summarize-file <ファイルパス>` |
 | `claudecode-features` | SubAgents/Skills/Commands/Hooks/MCPの構造解説 | `claude-code-guide` エージェント内で使用 |
 | `build-and-review` | 業界調査→差別化戦略構築→文章添削を3エージェントで順次実行 | `/build-and-review` |
+| `review-driven-build` | 実装前に観点洗い出し→実装→コードレビュー→修正を完結させるワークフロー | 「レビューしながら実装して」`/review-driven-build` |
 
 ---
 

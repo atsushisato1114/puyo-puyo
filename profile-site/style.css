@@ -4,6 +4,7 @@
 /* === Design tokens === */
 :root {
   --bg: #08080f;
+  --bg-rgb: 8,8,15;
   --surface: rgba(255,255,255,0.04);
   --surface-hover: rgba(255,255,255,0.07);
   --border: rgba(255,255,255,0.08);
@@ -65,7 +66,7 @@ nav {
   border-bottom: 1px solid var(--border);
   position: sticky;
   top: 0;
-  background: rgba(8,8,15,0.88);
+  background: rgba(var(--bg-rgb),0.88);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   z-index: 100;
@@ -88,8 +89,37 @@ nav {
 
 /* === Hero === */
 .hero {
-  padding: 96px 0 72px;
-  text-align: center;
+  position: relative;
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: var(--bg);
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('images/hero.png');
+  background-size: cover;
+  background-position: center right;
+  opacity: 0.92;
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(var(--bg-rgb),0.97) 0%,
+    rgba(var(--bg-rgb),0.88) 40%,
+    rgba(var(--bg-rgb),0.45) 65%,
+    rgba(var(--bg-rgb),0.10) 100%
+  );
+}
+.hero-content {
+  padding: 80px 24px;
+  width: 100%;
 }
 .hero-label {
   display: inline-block;
@@ -104,11 +134,12 @@ nav {
   margin-bottom: 24px;
 }
 .hero h1 {
-  font-size: clamp(32px, 6vw, 56px);
+  font-size: clamp(32px, 5.5vw, 54px);
   font-weight: 700;
   letter-spacing: -0.02em;
   line-height: 1.15;
   margin-bottom: 20px;
+  max-width: 560px;
   background: linear-gradient(135deg, #fff 40%, var(--accent-violet));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -117,14 +148,13 @@ nav {
 .hero p {
   font-size: 16px;
   color: var(--muted);
-  max-width: 480px;
-  margin: 0 auto 36px;
+  max-width: 420px;
+  margin: 0 0 36px;
   line-height: 1.7;
 }
 .badge-row {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   gap: 8px;
 }
 .badge {
@@ -419,5 +449,12 @@ footer a:hover { text-decoration: underline; }
   .card.full .card-img { aspect-ratio: 16/9; max-height: none; }
   nav { padding: 14px 16px; }
   .nav-links { gap: 16px; }
-  .hero { padding: 60px 0 48px; }
+  .hero { min-height: auto; }
+  .hero::before { background-position: center; }
+  .hero::after {
+    background: linear-gradient(to bottom, rgba(var(--bg-rgb),0.92) 0%, rgba(var(--bg-rgb),0.85) 100%);
+  }
+  .hero-content { padding: 56px 16px; }
+  .hero h1 { font-size: 28px; }
+  .hero p { max-width: 100%; }
 }
