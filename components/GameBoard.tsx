@@ -1,5 +1,6 @@
 'use client';
 
+import { useMemo } from 'react';
 import type { Board, Position, PuyoPair, Color } from '@/lib/types';
 import { BOARD_WIDTH, BOARD_HEIGHT } from '@/lib/constants';
 import { getGhost } from '@/lib/gameLogic';
@@ -48,10 +49,15 @@ interface Props {
 }
 
 export default function GameBoard({ board, currentPiece, clearingCells }: Props) {
-  const grid = buildGrid(board, currentPiece, clearingCells);
+  const grid = useMemo(
+    () => buildGrid(board, currentPiece, clearingCells),
+    [board, currentPiece, clearingCells],
+  );
 
   return (
     <div
+      role="application"
+      aria-label="ぷよぷよゲームボード（6列×12行）"
       className="relative rounded-xl overflow-hidden"
       style={{
         display: 'grid',
@@ -67,6 +73,7 @@ export default function GameBoard({ board, currentPiece, clearingCells }: Props)
         row.map((cell, x) => (
           <div
             key={`${x}-${y}`}
+            aria-hidden="true"
             style={{
               borderRight: x < BOARD_WIDTH - 1 ? '1px solid rgba(255,255,255,0.035)' : 'none',
               borderBottom: y < BOARD_HEIGHT - 1 ? '1px solid rgba(255,255,255,0.035)' : 'none',
